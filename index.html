@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsiveness.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Gustavo Dias | Portfolio</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="nav">
+        <a href="#">
+            <p class="nav__icon">
+                Gustavo<span class="nav__icon nav__icon--special">Dias</span>
+            </p>
+        </a>
+
+        <div class="nav__burguer hidden">
+            <input type="checkbox" id="nav__burguer-input">
+            <label class="nav__burguer-label" for="nav__burguer-input">
+                <div class="nav__burguer-icon"></div>
+            </label>
+        </div>
+
+        <ul class="nav__list">
+            <li class="nav__list-item">
+                <a href="#">
+                    <p>About</p>
+                </a>
+            </li>
+
+            <li class="nav__list-item">
+                <a href="#">
+                    <p>Skills</p>
+
+                </a>
+            </li>
+
+            <li class="nav__list-item">
+                <a href="#">
+                    <p>Projects</p>
+                </a>
+            </li>
+            <li class="nav__list-button">
+                <button class="nav__btn">
+                    <a href="#">
+                        <p>Contact</p>
+                    </a>
+                </button>
+            </li>
+        </ul>
+    </header>
+
+    <!-- Content -->
+    <main>
+        <!-- Home -->
+        <section class="home content">
+            <div class="home__intro">
+                <div class="home__intro-top">
+                    <div class="square"></div>
+                    <p>Hello there, my name is Gustavo Dias,</p>
+                </div>
+                <h1 class="home__intro-mid">I'm a JavaScript FullStack Developer.</h1>
+                <h2 class="home__intro-bottom">Computer Science Student at UFJF and a Dev focused in learning and improving in JavaScript<span>(<i class="devicon-javascript-plain home__intro-tec"></i>)</span> and their Frameworks, mainly, in React<span class="">(<i class="devicon-react-original home__intro-tec"></i>)</span> and Node<span>(<i class="devicon-nodejs-plain home__intro-tec"></i>)</span>.</h2>
+                <div class="home__intro-buttons">
+                    <a>
+                        <button class="home__button home__button--colored">
+                            <p>updated github</p>
+                            <img class="home__button-arrow" src="./assets/img/home/arrow.png">
+                        </button>
+                    </a>
+                    <a>
+                        <button class="home__button home__button--white">
+                            <p>download CV</p>
+                            <img class="home__button-arrow" src="./assets/img/home/arrow.png">
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="home__image">
+                <img src="./assets/img/home/profile-img.png">
+            </div>
+        </section>
+
+
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
