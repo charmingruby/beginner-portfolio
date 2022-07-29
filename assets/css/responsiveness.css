@@ -73,41 +73,39 @@
         transition: .2s;
     }
 
-    .nav__list-item:hover {
-
-        transition: .2s;
-    }
-
-    .nav__list-item:hover.nav__list-item a{
-        color: var(--pColor4);
-        transition: .2s;
-    }
-
-    .nav__btn:hover {
-        background-color: var(--sColor1);
-        transition: .2s;
-    }
-
-    .nav__btn:hover.nav__list-btn a{
-        color: var(--pColor4);
-        transition: .2s;
-    }
 
     /* Home */
     .home.content{
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap: 4rem; */
         height: auto;
         padding-top: calc(4% + 72px);
         padding-bottom: 4%;
+        
+        display: grid;
+        grid-template-areas: "homeImage"
+                             "homeContent";
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 1fr;
     }
 
     .home__intro {
+        grid-area: homeContent;
         display: flex;
         flex-direction: column;
         width: 100%;
         justify-content: space-evenly;
+    }
+
+    .home__image {
+        grid-area: homeImage;
+        margin-bottom: 2rem;
+    }
+
+    .home__intro-mid {
+        font-size: 3rem;
     }
 
     .home__intro-bottom {
@@ -118,15 +116,26 @@
     .home__intro-buttons {
         display: flex;
         flex-direction: column;
+        gap: 1rem;
+    }
+
+    .home__button p {
+        font-size: 1.2rem;
     }
     
     .home__intro-buttons a {
         width: 100%;
     }
 
+    .home__button--white {
+        background-color: var(--pColor5);
+        border-radius: 6px;
+        box-shadow: 4px 4px 4px var(--pColor5);  
+    }
+
     .home__image img{
         display: flex;
-        width: 70%;
+        width: 40%;
         border-radius: 50%;
         border: 6px solid var(--pColor1);
         box-shadow: 0 0 0 10px var(--sColor1);
@@ -136,7 +145,7 @@
         content: "";
         position: absolute;
         right: 0;
-        height: 150px;
+        height: 100px;
         width: 100%;
         z-index: -1;
         background-color: var(--sColor1);
