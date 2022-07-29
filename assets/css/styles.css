@@ -220,7 +220,6 @@ li {
     flex-direction: column;
     width: 50%;
     justify-content: space-evenly;
-    position: relative;
 }
 
 .home__intro-top {
@@ -309,7 +308,6 @@ li {
     border-radius: 50%;
     border: 6px solid var(--pColor1);
     box-shadow: 0 0 0 6px var(--sColor1);
-    position: relative;
 }
 
 .home__image::before {

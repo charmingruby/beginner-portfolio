@@ -1,8 +1,10 @@
 const burguer = document.querySelector('#nav__burguer-input');
 const sidebar = document.querySelector('.nav__list');
+const body = document.querySelector('body');
 
 burguer.addEventListener('click', (e) => {
     sidebar.classList.toggle('is-active');
+    body.classList.toggle('nav--overflow');
 });
 
 const nav = document.querySelector('.nav');
