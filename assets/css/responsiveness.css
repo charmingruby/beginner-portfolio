@@ -80,15 +80,14 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 4rem; */
-        height: auto;
         padding-top: calc(4% + 72px);
-        padding-bottom: 4%;
+        margin-bottom: 10%;
         
         display: grid;
         grid-template-areas: "homeImage"
                              "homeContent";
         grid-template-columns: 1fr;
-        grid-template-rows: .5fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     .home__intro {
@@ -128,7 +127,7 @@
     }
 
     .home__button--white {
-        background-color: var(--pColor5);
+        background-color: var(--sColor1);
         border-radius: 6px;
         box-shadow: 4px 4px 4px var(--pColor5);  
     }
@@ -149,5 +148,65 @@
         width: 100%;
         z-index: -1;
         background-color: var(--sColor1);
+    }
+
+    /* About */
+    .about.content {
+        height: auto;
+        width: 100%;
+        padding-top: 8%;
+        padding-bottom: 4%; 
+        display: grid;
+        grid-template-areas: "aboutInfo"
+                             "aboutImage";
+        grid-template-rows: 2fr 40%;
+        grid-template-columns: 1fr;
+        z-index: -1;
+        position: relative;
+    }
+
+    .about__infos {
+        grid-area: aboutInfo;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .about__illustration {
+        grid-area: aboutImage;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about__illustration::before {
+        content: "";
+        position: absolute;
+        width: 60%;
+        height: 70%;
+        background-color: var(--pColor3);
+        z-index: -1;
+        left: 20%;
+        border-radius: 40% 60% 70% 30% / 
+                       40% 50% 60% 50%;
+        top: 15%;
+    }
+
+    .about__illustration img {
+        width: 100%;
+    }
+
+    .about__infos-top {
+        margin-bottom: 1rem;
+    }
+
+    .about__info-text {
+        margin-bottom: 1rem;
+    }
+
+    .about-stack__tec {
+        margin-bottom: .5rem;
     }
 }
