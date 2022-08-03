@@ -11,6 +11,15 @@
     --pColor5: #26293d;
     --pColor6: #0a121e;
 
+    --javascript: #F0DB4F;
+    --react: #61DBFB;
+    --typescript: #007acc;
+    --node: #3C873A;
+    --tailwind: #38bdf8;
+    --express: #ffffff;
+    --mongo: #4DB33D;
+    --cpp: #004482;
+
     --defaultMargin: 0rem 10%;
 }
 
@@ -19,6 +28,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -28,7 +38,6 @@ body {
 
 a {
     text-decoration: none;
-    scroll-behavior: smooth;
 }
 
 li {
@@ -218,13 +227,27 @@ li {
     padding: var(--defaultMargin);
 }
 
+.section__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--pColor1);
+}
+
+.square {
+    height: 10px;
+    width: 10px;
+    background-color: var(--sColor1);
+}
+
 /* Home */
 .home.content{
     height: 100vh;
-    padding-top: 8%;
+    padding-top: 4%;
     margin-bottom: 4%; 
     width: 100%;
-
     display: grid;
     grid-template-areas: "homeContent . homeImage";
     grid-template-columns: 1fr 10rem 1fr;
@@ -262,21 +285,6 @@ li {
     height: 200px;
     width: 25%;
     z-index: -1;
-    background-color: var(--sColor1);
-}
-
-.section__title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: var(--pColor1);
-}
-
-.square {
-    height: 10px;
-    width: 10px;
     background-color: var(--sColor1);
 }
 
@@ -358,6 +366,7 @@ li {
     grid-template-columns: 2fr 10rem 2fr;
     grid-template-rows: 1fr;
     position: relative;
+    z-index: -1;
 }
 
 .about__illustration::before {
@@ -440,4 +449,127 @@ li {
     border-radius: 6px;
     box-shadow: 4px 4px 4px var(--pColor5);  
     font-size: clamp(5px, 5vw, 1rem);
+}
+
+/* Skills */
+.skills.content {
+    display: grid;
+    grid-template-areas: "skillsInfo . skillsImage";
+    grid-template-columns: 2fr 10rem 2fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+.skills__illustration {
+    grid-area: skillsImage;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skills__illustration img {
+    width: 500px;
+}
+
+.skills__infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skills__accordions {
+    grid-area: skillsInfo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.accordion {
+    background-color: var(--sColor1);
+    color: var(--pColor1);
+    border-radius: 6px;
+    box-shadow: 4px 4px 4px var(--pColor5);  
+    width: 100%;
+}
+
+.accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 12px 12px;
+}
+
+.accordion__header span {
+    font-size: 1.2rem;
+}
+
+.accordion__color {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--pColor1);
+}
+
+#accordion__js {
+    background-color: var(--javascript);
+}
+
+#accordion__ts {
+    background-color: var(--typescript);
+}
+
+#accordion__react {
+    background-color: var(--react);
+}
+
+#accordion__node {
+    background-color: var(--node);
+}
+
+#accordion__tailwind {
+    background-color: var(--tailwind);
+}
+
+#accordion__express {
+    background-color: var(--express);
+}
+
+#accordion__mongo {
+    background-color: var(--mongo);
+}
+
+#accordion__cpp {
+    background-color: var(--cpp);
+}
+
+.accordion__header:hover {
+    cursor: pointer;
+}
+
+.accordion__title {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.accordion__content {
+    background-color: var(--pColor1);
+    color: var(--pColor6);
+    border-radius: 0px 0px 6px 6px;
+    overflow: hidden;
+    transition: all .5 ease;
+    max-height: 0;
+}
+
+.accordion__content p {
+    
+    padding: 8px 12px;
+}
+
+.accordion-icons {
+    font-size: 1rem;
 }
