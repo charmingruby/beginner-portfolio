@@ -81,7 +81,7 @@
         justify-content: space-between;
         gap: 4rem; */
         padding-top: calc(4% + 72px);
-        margin-bottom: 10%;
+        margin-bottom: 9%;
         
         display: grid;
         grid-template-areas: "homeImage"
@@ -209,5 +209,20 @@
 
     .about-stack__tec {
         margin-bottom: .5rem;
+    }
+
+    .skills__illustration {
+        display: none;
+    }
+
+    .skills.content {
+        display: flex;
+    }
+
+    .skills__infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
     }
 }

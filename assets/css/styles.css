@@ -33,7 +33,7 @@
 
 body {
     position: relative;
-    background-color: var(--pColor4);
+    background-image:linear-gradient(to right, var(--pColor3), var(--pColor5), var(--pColor4)) ;
 }
 
 a {
@@ -240,6 +240,7 @@ li {
     height: 10px;
     width: 10px;
     background-color: var(--sColor1);
+    box-shadow: 0px 0px 4px var(--sColor1);
 }
 
 /* Home */
@@ -359,7 +360,7 @@ li {
 .about.content {
     height: 100vh;
     width: 100%;
-    padding-top: 8%;
+    padding-top: 4%;
     padding-bottom: 4%; 
     display: grid;
     grid-template-areas: "aboutImage . aboutInfo";
@@ -460,6 +461,10 @@ li {
     height: 100vh;
 }
 
+.section__title.skills {
+    margin-bottom: 12px;
+}
+
 .skills__illustration {
     grid-area: skillsImage;
     display: flex;
@@ -468,7 +473,7 @@ li {
 }
 
 .skills__illustration img {
-    width: 500px;
+    width: 100%;
 }
 
 .skills__infos {
@@ -572,4 +577,74 @@ li {
 
 .accordion-icons {
     font-size: 1rem;
+}
+
+/* Projects */
+.projects.content {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #122237, var(--pColor6), #0e1a2b) ;
+    border-radius: 10px;
+} 
+
+.projects__intro {
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects h2 {
+    color: var(--pColor1);
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.projects__infos {
+    display: flex;
+    gap: 10rem;
+}
+
+.projects__infos-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.projects__infos-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.projects__infos-text  p {
+    color: var(--pColor1);
+    font-weight: 700;
+    font-size: clamp(5px, 5vw, 1.4rem);
+}
+
+.projects__infos-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.projects__infos-illustration img {
+    width: 400px;
+}
+
+.projects__box {
+}
+
+.project {
+    background-color: var(--sColor2);
+    max-width: 400px;
+    border-radius: 6px;
+}
+
+.project button img {
+    width: 10px;
 }
