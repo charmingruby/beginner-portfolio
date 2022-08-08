@@ -594,7 +594,6 @@ li {
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(to right, #122237, var(--pColor6), #0e1a2b) ;
-    border-radius: 10px;
     padding-top: 2%;
     border-top: 2px dashed var(--sColor1);
     border-bottom: 2px dashed var(--sColor1);
@@ -702,4 +701,37 @@ li {
 
 .project__infos img {
     width: 16px;
+}
+
+.project__display-null {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.null,
+.null::before,
+.null::after {
+    position: absolute;
+    width: 64px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--pColor1);
+}
+
+.null {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.null::before {
+    content: "";
+    transform: rotate(45deg);
+}
+
+.null::after {
+    content: "";
+    transform: rotate(-45deg);
 }
