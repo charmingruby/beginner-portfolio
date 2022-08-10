@@ -735,3 +735,77 @@ li {
     content: "";
     transform: rotate(-45deg);
 }
+
+/* Contact */
+.contact.content {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: grid;
+    grid-template-areas: "contactInfo . contactImage";
+    grid-template-columns: 2fr 10rem 2fr;
+    grid-template-rows: 1fr;
+} 
+
+.contact__links {
+    display: flex;
+    flex-direction: column;
+    grid-area: contactInfo;
+}
+
+.media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    width: 350px;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.media__text {
+    display: flex;
+    align-items: center;
+    color: var(--pColor1);
+    gap: 16px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.media__text img {
+    width: 30px;
+    padding: 1px;
+    border-radius: 4px;
+}
+
+.media__link img {
+    width: 30px;
+}
+
+.contact__illustration {
+    grid-area: contactImage;
+}
+
+.contact__illustration img {
+    width: 100%;
+}
+
+#linkedin {
+    background-color: #0072b1;
+    border-bottom: 5px solid #014e78;
+}
+
+#github {
+    background-color: #161b22;
+    border-bottom: 5px solid #080a0c;    
+}
+
+#gmail {
+    background-color: #d2382c;
+    border-bottom: 5px solid #982a22;    
+}   
+
+#instagram {
+    background-color: #bc2a8d;
+    border-bottom: 5px solid #741857;    
+}
