@@ -20,32 +20,45 @@ window.addEventListener('scroll', () => {
     scrolled = actualScroll;    
 });
 
-const accordionHeaders = document.querySelectorAll('.accordion__header');
+const modal = document.querySelector('.skills__modal');
+const modalBtns = document.querySelectorAll('.skills__display-item');
 
-accordionHeaders.forEach(accordionHeader => {
-    accordionHeader.addEventListener('click', () => {
-        const height = accordionHeader.nextElementSibling.scrollHeight
-        const accordionBtn = accordionHeader.querySelector('.accordion__button');
-        if(accordionHeader.classList.contains('active')) {
-            accordionHeader.classList.remove('active');
-            accordionHeader.nextElementSibling.style.maxHeight = '0px';
-            accordionBtn.innerHTML = '+';
-            console.log('g');
+modalBtns.forEach(modalBtn => {
+    modalBtn.addEventListener('click', () => {
+        modal.classList.add('skills__modal--active');
+        body.style.overflow = 'hidden';
 
-        } else {
-            accordionHeaders.forEach(item => {
-                item.classList.remove('active');
-                item.nextElementSibling.style.maxHeight = '0px';
-                const itemBtn = item.querySelector('.accordion__button');
-                itemBtn.innerHTML = '+';
-            })
+        const modalNameTxt = modalBtn.querySelector('.skills__item-name').textContent;
+        const modalName = document.querySelector('.modal__name-txt');
+        modalName.innerHTML = modalNameTxt;
 
-            accordionHeader.classList.add('active');
-            accordionHeader.nextElementSibling.style.maxHeight = `${height}px`
-            accordionBtn.innerHTML = '-';
+        const modalDescTxt = modalBtn.querySelector('.skills__item-desc').textContent;
+        const modalDesc = document.querySelector('.modal__desc');
+        modalDesc.innerHTML = modalDescTxt;
 
-            
-            console.log('t');
-        }
-    })
+        const modalIconEl = modalBtn.querySelector('.skills__img');
+        const modalIconClone = modalIconEl.cloneNode(true);
+        modalIconClone.classList.add('modalClone');
+        const modalIcon = document.querySelector('.modal__name-icon');        
+        modalIcon.appendChild(modalIconClone);        
+    });
 })
+
+const closeModal = () => {
+    modal.classList.remove('skills__modal--active');
+    body.style.overflow = 'auto';
+
+    const modalDesc = document.querySelector('.modal__desc');
+    modalDesc.innerHTML = '';
+
+    const modalIcon = document.querySelector('.modal__name-icon');        
+    modalIcon.removeChild(modalIcon.firstChild);
+}
+
+document.querySelector('.modal__close').addEventListener('click', () => {
+     closeModal();
+});
+
+document.querySelector('.modal__buttons-close').addEventListener('click', () => {
+    closeModal();
+});
