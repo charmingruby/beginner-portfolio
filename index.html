@@ -111,7 +111,7 @@
                     <p>about</p>
                 </div>
 
-                <div class="about__title title-defult">
+                <div class="about__title title-default">
                     <p>Computer Science Student</p>
                 </div>
 
@@ -172,8 +172,8 @@
                     <p>skills</p>
                 </div>
 
-                <div class="skills__title title-default">
-                    <p class="skills__infos-intro">Web Dev Abilities</p>
+                <div class="title-default skills__title">
+                    <p>Web Dev Abilities</p>
                 </div>
 
                 <div class="skills__desc desc-default">
@@ -183,7 +183,6 @@
                 <div class="skills__display">
 
                     <div class="skills__display-item">
-
                         <p class="skills__name hidden">HTML</p>
                         <p class="skills__desc hidden">test</p>
                         <i class="devicon-html5-plain skills__img"></i>
@@ -250,28 +249,27 @@
 
         </section>
 
+        <!-- Skills Modal -->
         <section class="skills__modal">
             <div class="modal">
-
-                <div class="modal__title">
-
-                    <div class="modal__name">
-                        <div class="modal__name-icon"></div>
-                        <p class="modal__name-txt"></p>
+                <div class="modal__header">
+                    <div class="modal__title">
+                        <div class="modal__icon"></div>
+                        <p class="modal__name"></p>
                     </div>
 
                     <div class="modal__close">
                         <img src="./assets/img/skills/modal/close.png">
                     </div>
-
                 </div>
                 
                 <div class="modal__content">
                     <p class="modal__desc"></p>
                 </div>
+
                 <div class="modal__buttons">
-                    <button class="modal__buttons-github">Check</button>
-                    <button class="modal__buttons-close">Close</button>
+                    <button class="modal__button-github">Check</button>
+                    <button class="modal__button-close">Close</button>
                 </div>
             </div>
         </section>
@@ -279,42 +277,44 @@
         <!-- Projects -->
         <section class="projects container" id="projects" data-aos="fade-up" data-aos-duration="1000">
             
-            <div class="projects__intro">
-                <div class="projects__intro-illustration">
+            <div class="projects__content">
+                <div class="projects__image">
                     <img src="./assets/img/projects/projects-illustration.svg">
                 </div>
 
-                <div class="projects__intro-text">
+                <div class="projects__infos">
                     <div class="section__title skills">
                         <div class="square"></div>
                         <p>projects</p>
                     </div>
-                    <h2>
-                        Pretty designed and well coded websites.
-                    </h2>
-                    <h3>
-                        Projects made with my self taught and some courses in Web Development, since the Front End, to
-                        the Back End.
-                    </h3>
-                    <div class="projects__infos-texts">
-                        <div class="projects__infos-text">
+                    
+                    <div class="projects__title title-default">
+                        <p>Pretty designed and well coded websites.</p>
+                    </div>
+                    
+                    <div class="projects__desc desc-default">
+                        <p>Projects made with my self taught and some courses in Web Development, since the Front End, to the Back End.</p>
+                    </div>
+                    
+                    <div class="projects__topics">
+                        <div class="projects__topic topic-default">
                             <i class="fa-regular fa-circle-check check-icon"></i>
                             <p>Attention with the Designs;</p>
                         </div>
 
-                        <div class="projects__infos-text">
+                        <div class="projects__topic topic-default">
                             <i class="fa-regular fa-circle-check check-icon"></i>
                             <p>Clean Codes;</p>
                         </div>
 
-                        <div class="projects__infos-text">
+                        <div class="projects__topic topic-default">
                             <i class="fa-regular fa-circle-check check-icon"></i>
                             <p>Efficient Programs;</p>
                         </div>
                     </div>
                     <div class="projects__btn">
                         <a href="https://github.com/charmingruby">
-                            <button class="default-button">
+                            <button class="button-default button-default--colored">
                                 <p>github profile</p>
                                 <i class="fa-solid fa-arrow-right link icon"></i>
                             </button>
@@ -323,54 +323,54 @@
                 </div>
             </div>
 
-            <div class="projects-container">
+            <div class="projects__display">
 
-                <div class="project" id="project-null">
+                <div class="projects__card" id="project-null">
                     <p>Check out my principal projects as developer<i class="fa-solid fa-heart null-icon"></i></p>
                 </div>
 
-                <div class="project">
+                <div class="projects__card">
                     <h2>Portfolio</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quisquam veniam cupiditate. Ut
                         reprehenderit qui assumenda quis nos</p>
-                    <div class="project__link">
+                    <div class="projects__link">
                         <a href="#">See repository</a>
                         <i class="fa-solid fa-arrow-right link icon"></i>
                     </div>
-                    <div class="project__icon"><i class="fa-solid fa-address-card"></i></div>
+                    <div class="projects__icon"><i class="fa-solid fa-address-card"></i></div>
                 </div>
 
-                <div class="project">
+                <div class="projects__card">
                     <h2>Pokédex</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quisquam veniam cupiditate. Ut
                         reprehenderit qui assumenda quis nos</p>
-                    <div class="project__link">
+                    <div class="projects__link">
                         <a href="#">See repository</a>
                         <i class="fa-solid fa-arrow-right link icon"></i>
                     </div>
-                    <div class="project__icon"><i class="fa-solid fa-gamepad"></i></i></div>
+                    <div class="projects__icon"><i class="fa-solid fa-gamepad"></i></i></div>
                 </div>
 
-                <div class="project">
+                <div class="projects__card">
                     <h2>JS Studies</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quisquam veniam cupiditate. Ut
                         reprehenderit qui assumenda quis nos</p>
-                    <div class="project__link">
+                    <div class="projects__link">
                         <a href="#">See repository</a>
                         <i class="fa-solid fa-arrow-right link icon"></i>
                     </div>
-                    <div class="project__icon"><i class="fa-solid fa-book"></i></i></div>
+                    <div class="projects__icon"><i class="fa-solid fa-book"></i></i></div>
                 </div>
 
-                <div class="project">
+                <div class="projects__card">
                     <h2>(???)</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quisquam veniam cupiditate. Ut
                         reprehenderit qui assumenda quis nos</p>
-                    <div class="project__link">
+                    <div class="projects__link">
                         <a href="#">See repository</a>
                         <i class="fa-solid fa-arrow-right link icon"></i>
                     </div>
-                    <div class="project__icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div class="projects__icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
                 </div>
 
             </div>
@@ -378,12 +378,9 @@
 
         <!-- Contact -->
         <section class="contact container" id="contact" data-aos="fade-up" data-aos-duration="1000">
-
-            <div class="contact-intro">
-                <div class="section__title contact">
-                    <div class="square"></div>
-                    <p>contact</p>
-                </div>
+            <div class="section__title contact">
+                <div class="square"></div>
+                <p>contact</p>
             </div>
 
             <div class="contact-container">
@@ -438,8 +435,6 @@
                 </form>
 
                 <div class="contact__infos">
-                    
-
                     <h2>Contact Infos</h2>
 
                     <div class="contact-intro__msg">
@@ -468,37 +463,40 @@
                             <p>gustavodiasa2121@gmail.com</p>
                         </div>
                     </div>
-
-                    
                 </div>
-
             </div>
-
         </section>
     </main>
     
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <h3>Gustavo<span class="blue-text">Dias</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa ipsa dignissimos suscipit quis
-                doloremque! Velit debitis reiciendis placeat cumque provident! Sapiente, doloribus nemo. Soluta
-                doloremque quasi deserunt dolorum? Quidem, non.</p>
-            <div class="footer-content__medias">
-                <div class="footer-content__media">
+        <div class="footer__content">
+            <div class="footer__name">
+                <h3>Gustavo<span class="blue-text">Dias</h3>
+            </div>
+
+            <div class="footer__desc">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa ipsa dignissimos suscipit quis doloremque! Velit debitis reiciendis placeat cumque provident! Sapiente, doloribus nemo. Soluta doloremque quasi deserunt dolorum? Quidem, non.</p>
+            </div>
+
+            <div class="footer__medias">
+                <div class="footer__media">
                     <i class="fa-brands fa-instagram"></i>
                 </div>
-                <div class="footer-content__media">
+
+                <div class="footer__media">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </div>
-                <div class="footer-content__media">
+
+                <div class="footer__media">
                     <i class="fa-brands fa-github"></i>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer__bottom">
             <p>Copyright &copy;2022 <a href="#" class="blue-text">Gustavo Dias</a></p>
-            <svg class="wave-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
+            
+            <svg class="wave-default wave__footer-bot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
                 preserveAspectRatio="none">
                 <defs>
                     <linearGradient id="gradient3">
@@ -512,7 +510,7 @@
                 </path>
             </svg>
         </div>
-        <svg class="wave-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <svg class="wave-default wave__footer-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
             <defs>
                 <linearGradient id="gradient2">
                     <stop offset="0%" stop-color="#26293d" />

@@ -220,22 +220,15 @@
     /*
     Projects
     */
-    .projects__intro {
+    .projects__content {
         display: grid;
         grid-template-areas: "projectsInfo";
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
 
-    .projects__intro-illustration {
+    .projects__image {
         display: none;
-    }
-
-    .project__display {
-        box-shadow: 5px 5px 20px;
-        border-top: 10px solid var(--pColor1);
-        border-left: 10px solid var(--pColor1);
-        border-right: 10px solid var(--pColor1);
     }
 
     /*
@@ -308,15 +301,15 @@
         font-size: 3.5rem;
     }
 
-    .project {
+    .projects__card {
         font-size: 100%;
     }
     
-    .project p {
+    .projects__card p {
         font-size: 1rem;
     }
 
-    .project__link {
+    .projects__link {
         font-size: 2rem;
     }
 }
@@ -342,11 +335,11 @@
         font-size: 2rem;
     }
 
-    .project p {
+    .projects__card p {
         font-size: 1rem;
     }
 
-    .project__link {
+    .projects__link {
         font-size: 1rem;
     }
 

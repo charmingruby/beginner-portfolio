@@ -5,7 +5,7 @@ const body = document.querySelector('body');
 const navLinks = document.querySelectorAll('.nav__item');
 const nav = document.querySelector('.nav');
 const modal = document.querySelector('.skills__modal');
-const modalBtns = document.querySelectorAll('.skills__display-item');
+const modalItems = document.querySelectorAll('.skills__display-item');
 
 /* V A R I A B L E S */
 let navStatus = false;
@@ -19,11 +19,11 @@ const closeModal = () => {
     const modalDesc = document.querySelector('.modal__desc');
     modalDesc.innerHTML = '';
 
-    const modalIcon = document.querySelector('.modal__name-icon');
+    const modalIcon = document.querySelector('.modal__icon');
     modalIcon.removeChild(modalIcon.firstChild);
 }
 
-const navCheck= (res) => {
+const navCheck = (res) => {
     if (navStatus) {
         body.classList.remove('nav__overflow--hidden');
         navStatus = false;
@@ -64,23 +64,23 @@ window.addEventListener('scroll', () => {
 });
 
 /// Modal
-modalBtns.forEach(modalBtn => {
-    modalBtn.addEventListener('click', () => {
+modalItems.forEach(modalItem => {
+    modalItem.addEventListener('click', () => {
         modal.classList.add('skills__modal--active');
         body.style.overflow = 'hidden';
 
-        const modalNameTxt = modalBtn.querySelector('.skills__name').textContent;
-        const modalName = document.querySelector('.modal__name-txt');
+        const modalNameTxt = modalItem.querySelector('.skills__name').textContent;
+        const modalName = document.querySelector('.modal__name');
         modalName.innerHTML = modalNameTxt;
 
-        const modalDescTxt = modalBtn.querySelector('.skills__desc').textContent;
+        const modalDescTxt = modalItem.querySelector('.skills__desc').textContent;
         const modalDesc = document.querySelector('.modal__desc');
         modalDesc.innerHTML = modalDescTxt;
 
-        const modalIconEl = modalBtn.querySelector('.skills__img');
+        const modalIconEl = modalItem.querySelector('.skills__img');
         const modalIconClone = modalIconEl.cloneNode(true);
         modalIconClone.classList.add('modalClone');
-        const modalIcon = document.querySelector('.modal__name-icon');
+        const modalIcon = document.querySelector('.modal__icon');
         modalIcon.appendChild(modalIconClone);
     });
 })
@@ -91,6 +91,6 @@ document.querySelector('.modal__close').addEventListener('click', () => {
     closeModal();
 });
 
-document.querySelector('.modal__buttons-close').addEventListener('click', () => {
+document.querySelector('.modal__button-close').addEventListener('click', () => {
     closeModal();
 });

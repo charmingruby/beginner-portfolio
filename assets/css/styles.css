@@ -254,7 +254,7 @@ fieldset {
     font-size: 1.1rem;
 }
 
-.title-defult p {
+.title-default p {
     color: var(--pColor1);
     font-weight: 900;
     font-size: 2.6rem;
@@ -264,11 +264,16 @@ fieldset {
     color: var(--pColor2);
     font-weight: 400;
     font-size: 1.6rem;
-    margin-bottom: 30px;
+    margin: 15px 0;
+}
+
+.topic-default {
+    display: flex;
+    align-items: center;
 }
 
 .topic-default p {
-    color: var(--pColor2);
+    color: var(--pColor1);
     font-weight: 400;
     font-size: 1.5rem;
 }
@@ -467,13 +472,6 @@ Skills
     justify-content: center;
 }
 
-
-
-
-
-
-
-
 .skills__display {
     display: flex;
     align-items: center;
@@ -554,7 +552,7 @@ Modal
     border-left: 3px solid var(--sColor1);
 }
 
-.modal__name-icon {
+.modal__icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -563,7 +561,7 @@ Modal
     border-right: 3px solid var(--sColor1);
 }
 
-.modal__name-icon i {
+.modal__icon i {
     color: var(--sColor1);
     font-size: 2rem;
 }
@@ -572,13 +570,13 @@ Modal
     display: flex;
 }
 
-.modal__title {
+.modal__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.modal__name {
+.modal__title {
     font-weight: 700;
     color: var(--pColor6);
     height: 50px;
@@ -587,7 +585,7 @@ Modal
     align-items: center;
 }
 
-.modal__name-txt {
+.modal__name {
     letter-spacing: 5px;
 }
 
@@ -604,9 +602,6 @@ Modal
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: absolute;
-    top: 0px;
-    right: 0px; */
 }
 
 .modal__close img {
@@ -624,7 +619,7 @@ Modal
     gap: 20px;
 }
 
-.modal__buttons-close {     
+.modal__button-close {     
     background: none;
     border: none;
     font-size: 1.1rem;
@@ -634,12 +629,12 @@ Modal
     font-weight: 700;
 }
 
-.modal__buttons-close:active {
+.modal__button-close:active {
     font-size: 0.9rem;
     transition: .1s;
 }
 
-.modal__buttons-github {
+.modal__button-github {
     background-color: var(--sColor1);
     border: none;
     border-bottom: 4px solid var(--sColor2);
@@ -652,11 +647,10 @@ Modal
 
 }
 
-.modal__buttons-github:active {
+.modal__button-github:active {
     font-size: 0.9rem;
     transition: .1s;
 }
-
 
 /* Projects */
 .projects.container {
@@ -667,15 +661,15 @@ Modal
     z-index: 1;
 } 
 
-.projects__intro {
+.projects__content {
     display: grid;
     grid-template-areas: "projectsImage . projectsInfo";
     grid-template-columns: 2fr 10rem 2fr;
     grid-template-rows: 1fr;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
-.projects__intro-illustration {
+.projects__image {
     grid-area: projectsImage;
     display: flex;
     align-items: center;
@@ -683,11 +677,11 @@ Modal
     width: 100%;
 }
 
-.projects__intro-illustration img {
+.projects__image img {
     width: 100%;
 }
 
-.projects__intro-text {
+.projects__infos {
     grid-area: projectsInfo;
     display: flex;
     flex-direction: column;
@@ -695,46 +689,17 @@ Modal
     align-items: flex-start;
 }
 
-.projects h2 {
-    color: var(--pColor1);
-    font-weight: 900;
-    font-size: 2.6rem;
-}
-
-.projects h3 {
-    color: var(--pColor2);
-    font-weight: 400;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.projects__infos {
-    display: flex;
-    gap: 10rem;
-}
-
-.projects__infos-texts {
+.projects__topics {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-.projects__infos-text {
-    display: flex;
-    align-items: center;
-    gap: 10px;  
-}
-
 .check-icon {
     color: var(--pColor1);
     font-size: 1rem;
-}
-
-.projects__infos-text  p {
-    color: var(--pColor1);
-    font-weight: 700;
-    font-size: 1.4rem;
+    margin-right: 10px;
 }
 
 .projects__btn {
@@ -769,13 +734,13 @@ Modal
     transition: .1s;    
 }
 
-.projects-container {
+.projects__display {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: 4rem;
 }
 
-.project {
+.projects__card {
     background-image: linear-gradient(145deg, var(--pColor3), var(--pColor4));
     border: 1px solid var(--pColor5);
     padding: 60px 20px;
@@ -785,7 +750,7 @@ Modal
     box-shadow: 4px 5px 4px var(--pColor5);
 }
 
-.project:hover {
+.projects__card:hover {
     cursor: pointer;
     transform: scale(1.1);
     transition: .1s;
@@ -810,7 +775,7 @@ Modal
     font-size: 1.2rem;
 }
 
-.project h2 {
+.projects__card h2 {
     color: var(--pColor2);
     font-weight: 700;
     font-size: 1.8rem;
@@ -818,31 +783,31 @@ Modal
     margin-bottom: 20px;
 }
 
-.project p {
+.projects__card p {
     color: var(--pColor2);
     margin-bottom: 20px;    
 }
 
-.project__link {
+.projects__link {
     font-weight: 700;
     font-size: 1.3rem;
     transition: .1s;
     color: var(--pColor2);
 }
 
-.project__link a {
+.projects__link a {
     margin-right: 10px;
 }
 
-.project__link a:hover {
+.projects__link a:hover {
     text-decoration: underline;
 }
 
-.project__link i {
+.projects__link i {
     color: var(--sColor1);
 }
 
-.project__icon {
+.projects__icon {
     background-image: linear-gradient(to bottom, var(--sColor1), var(--sColor2));
     display: flex;
     align-items: center;
@@ -856,12 +821,12 @@ Modal
     border: 1px solid var(--pColor5);
 }
 
-.project__icon i {
+.projects__icon i {
     color: var(--pColor2);
     font-size: 24px;
 }
 
-.project:hover > .project__icon {
+.projects__card:hover > .projects__icon {
     border-color: var(--sColor1);
 }
 
@@ -1118,7 +1083,7 @@ footer {
     padding-top: 42px;
 }
 
-.footer-content {
+.footer__content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1126,14 +1091,14 @@ footer {
     text-align: center;
 }
 
-.footer-content h3{
+.footer__name h3{
     font-size: 2.1rem;
     font-weight: 700;
     text-transform: capitalize;
     line-height: 3rem;
 }
 
-.footer-content p{
+.footer__desc p{
     max-width: 500px;
     margin: 10px auto;
     line-height: 28px;
@@ -1141,7 +1106,7 @@ footer {
     color: #cacdd2;
 }
 
-.footer-content__medias {
+.footer__medias {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1149,44 +1114,43 @@ footer {
     margin-bottom: 5px;
 }
 
-.footer-content__media i {
+.footer__media i {
     font-size: 1.8rem;
     cursor: pointer;
     transition: .1s;
 }   
 
-.footer-content__media i:hover {
+.footer__media i:hover {
     transform: scale(1.1);
     transition: .1s;
     color: var(--sColor1);
 }
 
-.footer-bottom {
+.footer__bottom {
     position: relative;
     background-image: linear-gradient(to right, #030508, #010203,#060b13);
     width: 100%;
     padding: 20px;
-    padding-top: 55px;
+    padding-top: 45px;
     padding-bottom: 20px;
     text-align: center;
 }
 
-.footer-bottom p{
+.footer__bottom p{
     font-size: 1rem;
     text-transform: capitalize;
     font-weight: 500;
 }
 
-.footer-bottom p a{
+.footer__bottom p a{
     font-size: 16px;
     text-decoration: none;
 }
 
-.wave-footer {
-    position: absolute;
+.wave__footer-top {
     top: -5px;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    height: 50px;
+}
+
+.wave__footer-bot {
+    top: -5px;
 }
