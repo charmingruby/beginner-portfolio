@@ -52,7 +52,6 @@ const fnBrowserDetect = () => {
         window.location.replace('../../error.html');
         browserName="No browser detection";
     }
-    document.querySelector('.k').innerHTML = browserName;
 }
 
 fnBrowserDetect();
