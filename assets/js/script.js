@@ -34,7 +34,6 @@ const navCheck = (res) => {
     }
 }
 
-
 const fnBrowserDetect = () => {
     let userAgent = navigator.userAgent;
     let browserName;
@@ -50,10 +49,12 @@ const fnBrowserDetect = () => {
     } else if (userAgent.match(/edg/i)) {
         browserName = "edge";
     } else {
+        window.location.replace('../../error.html');
         browserName="No browser detection";
     }
-     document.querySelector("h1").innerText="You are using "+ browserName +" browser";
 }
+
+fnBrowserDetect();
 
 /* E V E N T S */
 /// Menu Toggle

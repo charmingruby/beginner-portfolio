@@ -63,7 +63,7 @@ fieldset {
     height: 64px;
     width: 100%;
     transition: .5s;
-    z-index: 99;
+    z-index: 98;
 }
 
 .nav__icon {
@@ -1130,4 +1130,24 @@ footer {
 
 .wave__footer-bot {
     top: -5px;
+}
+
+/* ===== U N S U P P O R T E D ===== */
+.browser {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.browser i {
+    color: red;
+    font-size: 3rem;
+    margin-right: 10px;
+}
+
+.browser h1 {
+    font-size: 3rem;
 }
