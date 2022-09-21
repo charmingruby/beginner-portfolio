@@ -1,4 +1,4 @@
-/* MEDIUM DEVICES */
+/* ===== M O B I L E ===== */
 @media only screen and (max-width:768px) {
     :root {
         --defaultMargin: 0rem 5%;
@@ -17,9 +17,7 @@
         overflow-y: hidden;
     }
 
-    /* 
-    Nav 
-    */
+    /* ===== N A V B A R ===== */
     .nav {
         border-bottom: 2px solid#1d1f2e;
     }
@@ -86,9 +84,12 @@
         transition: .2s;
     }
 
-    /* 
-    Home 
-    */
+    /* ===== C O N T E N T  D E F A U L T ===== */
+    .image-default {
+        display: none;
+    }
+
+    /* ===== H O M E ===== */
     .home.container{
         padding-top: calc(4% + 72px);
         height: auto;
@@ -154,9 +155,7 @@
         background-color: var(--sColor1);
     }
 
-    /* 
-    About 
-    */
+    /* ===== A B O U T ===== */
     .about.container {
         height: auto;
         width: 100%;
@@ -178,18 +177,6 @@
         justify-content: center;
     }
     
-    .about__image {
-        grid-area: aboutImage;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: none;
-    }
-
-    .about__image img {
-        width: 100%;
-    }
 
     .about__title {
         margin-bottom: 1rem;
@@ -199,13 +186,7 @@
         margin-bottom: .5rem;
     }
 
-    /*
-    Skills
-    */
-    .skills__image {
-        display: none;
-    }
-
+    /* ===== S K I L L S ===== */
     .skills.container {
         display: flex;
     }
@@ -217,9 +198,7 @@
         width: 100%;
     }
 
-    /*
-    Projects
-    */
+    /* ===== P R O J E C T S ===== */
     .projects__content {
         display: grid;
         grid-template-areas: "projectsInfo";
@@ -227,20 +206,25 @@
         grid-template-rows: 1fr;
     }
 
-    .projects__image {
-        display: none;
+    .projects__card h2 {
+        font-size: 1.8rem;
+    }
+    
+    .projects__card p {
+    }
+    
+    .projects__link {
+        font-size: 1.3rem;
     }
 
-    /*
-    Contact
-    */
+    /* ===== C O N T A C T ===== */
     .contact.container {
         margin-top: 2rem;
     }
 
-    .contact-container {
+    .contact__content {
         display: grid;
-        grid-template-rows: 1fr 3rem 1fr;
+        grid-template-rows: 1fr 1rem 1fr;
         grid-template-columns: 1fr;
         grid-template-areas: "contactInfos" 
                              "."
@@ -251,21 +235,28 @@
 
 }
 
+/* ===== T I N Y  M O B I L E ===== */
 @media only screen and (max-width:548px) {
+    
+    /* ===== H O M E ===== */
     .home.container{
         margin-bottom: 5rem;
     }
 }
 
+/* ===== T A B L E T ===== */
 @media only screen and (min-width:769px) and (max-width:1150px) {
+    
     * {
         font-size: 70%;
     }
 
+    /* ===== N A V B A R ===== */
     .nav__item p {
         font-size: 1.3rem;
     }
 
+    /* ===== C O N T E N T  D E F A U L T ===== */
     .default-button p,
     .default-button i {
         font-size: 1.2rem;
@@ -275,6 +266,7 @@
         font-size: 100%;
     }
 
+    /* ===== A B O U T ===== */
     .about.container {
         width: 100%;
         display: grid;
@@ -286,6 +278,7 @@
         margin-bottom: 1rem;
     }
 
+    /* ===== S K I L L S ===== */
     .skills.container {
         display: grid;
         grid-template-areas: "skillsInfo . skillsImage";
@@ -301,6 +294,24 @@
         font-size: 3.5rem;
     }
 
+    .modal__name {
+        letter-spacing: 5px;
+        font-size: 3rem;
+    }
+    
+    .modal__icon i {
+        font-size: 3rem;
+    }
+
+    .modal__desc {
+        font-size: 2rem;
+    }
+
+    .modal__buttons button {
+        font-size: 1.8rem;
+    }
+
+    /* ===== P R O J E C T S ===== */
     .projects__card {
         font-size: 100%;
     }
@@ -314,27 +325,33 @@
     }
 }
 
+/* ===== L A R G E  D E S K T O P ===== */
 @media only screen and (min-width:1800px) {
     * {
         font-size: 120%;
     }
 
+    /* ===== N A V B A R ===== */
     .nav__item p {
         font-size: .8rem;
     }
 
+    /* ===== C O N T E N T  D E F A U L T ===== */
     .section__title p{
         font-size: .8rem;
     }
 
+    /* ===== H O M E ===== */
     .home__intro-mid p {
         font-size: 3rem;
     }
 
+    /* ===== S K I L L S ===== */
     .skills__display-item i {
         font-size: 2rem;
     }
 
+    /* ===== P R O J E C T S ===== */
     .projects__card p {
         font-size: 1rem;
     }
@@ -343,20 +360,21 @@
         font-size: 1rem;
     }
 
+    /* ===== C O N T A C T ===== */
     .form__field {
         font-size: 30px;
     }
 
-    .email-form textarea {
+    .contact__form textarea {
         margin-top: 10px;
     }
 
-    .email-form textarea ~ span
+    .contact__form textarea ~ span
     {
         transform: translateY(-42px);
     }
 
-    .contact__infos-medias {
+    .contact__medias {
         font-size: 20px;
     }
 }

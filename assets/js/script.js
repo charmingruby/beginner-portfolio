@@ -5,6 +5,7 @@ const body = document.querySelector('body');
 const navLinks = document.querySelectorAll('.nav__item');
 const nav = document.querySelector('.nav');
 const modal = document.querySelector('.skills__modal');
+const modalCard = document.querySelector('.modal');
 const modalItems = document.querySelectorAll('.skills__display-item');
 
 /* V A R I A B L E S */
@@ -34,7 +35,6 @@ const navCheck = (res) => {
 }
 
 /* E V E N T S */
-
 /// Menu Toggle
 menu.addEventListener('click', (e) => {
     menuContainer.classList.toggle('is-active');
@@ -68,7 +68,7 @@ modalItems.forEach(modalItem => {
     modalItem.addEventListener('click', () => {
         modal.classList.add('skills__modal--active');
         body.style.overflow = 'hidden';
-
+        
         const modalNameTxt = modalItem.querySelector('.skills__name').textContent;
         const modalName = document.querySelector('.modal__name');
         modalName.innerHTML = modalNameTxt;

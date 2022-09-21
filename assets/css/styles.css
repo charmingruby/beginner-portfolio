@@ -11,17 +11,6 @@
     --pColor5: #26293d;
     --pColor6: #0a121e;
 
-    --javascript: #F0DB4F;
-    --react: #61DBFB;
-    --typescript: #007acc;
-    --node: #3C873A;
-    --tailwind: #38bdf8;
-    --express: #ffffff;
-    --mongo: #4DB33D;
-    --cpp: #004482;
-    --html: #e34c26;
-    --css: #2965f1;
-
     --defaultMargin: 0rem 10%;
 
     --sucess: #77c985;
@@ -61,7 +50,7 @@ fieldset {
     display: none;
 }
 
-/* N A V B A R */
+/* ===== N A V B A R ===== */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -189,7 +178,7 @@ fieldset {
     transition: .5s;
 }
 
-/* C O N T E N T  D E F A U L T */
+/* ===== C O N T E N T  D E F A U L T ===== */
 .container {
     padding: var(--defaultMargin);
     padding-top: calc(64px + 2%);
@@ -203,6 +192,7 @@ fieldset {
     text-transform: uppercase;
     color: var(--pColor1);
     font-size: 1rem;
+    margin-bottom: 12px;
 }
 
 .square {
@@ -286,7 +276,7 @@ fieldset {
     height: 50px;
 }
 
-/* H O M E */
+/* ===== H O M E ===== */
 .home.container{
     width: 100%;
     display: grid;
@@ -364,9 +354,7 @@ fieldset {
     width: 50%;
 }
 
-/* 
-About 
-*/
+/* ===== A B O U T ===== */
 .about {
     position: relative;
 }
@@ -437,9 +425,7 @@ About
     transition: .1s;
 }
 
-/* 
-Skills 
-*/
+/* ===== S K I L L S ===== */
 .skills.container {
     display: grid;
     grid-template-areas: "skillsInfo . skillsImage";
@@ -449,10 +435,6 @@ Skills
     position: relative;
     z-index: 2;
     background-image: linear-gradient(to right, var(--pColor6), #152744 ,#0e1a2b) ;
-}
-
-.section__title.skills {
-    margin-bottom: 12px;
 }
 
 .skills__image {
@@ -517,10 +499,7 @@ Skills
     bottom: -40px;
 }
 
-/*
-Modal
-*/
-
+/* ===== M O D A L ===== */
 .skills__modal {
     display: none;
     align-items: center;
@@ -587,6 +566,7 @@ Modal
 
 .modal__name {
     letter-spacing: 5px;
+    font-size: 2rem;
 }
 
 .modal__desc {
@@ -616,7 +596,6 @@ Modal
 .modal__buttons {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .modal__button-close {     
@@ -627,6 +606,7 @@ Modal
     text-align: center;
     cursor: pointer;
     font-weight: 700;
+    padding: 10px 20px;
 }
 
 .modal__button-close:active {
@@ -652,7 +632,7 @@ Modal
     transition: .1s;
 }
 
-/* Projects */
+/* ===== P R O J E C T S ===== */
 .projects.container {
     display: flex;
     flex-direction: column;
@@ -700,6 +680,11 @@ Modal
     color: var(--pColor1);
     font-size: 1rem;
     margin-right: 10px;
+}
+
+.project-topic__icon {
+    font-size: 1.2rem;
+    margin-right: 5px;
 }
 
 .projects__btn {
@@ -776,7 +761,7 @@ Modal
 }
 
 .projects__card h2 {
-    color: var(--pColor2);
+    color: var(--pColor1);
     font-weight: 700;
     font-size: 1.8rem;
     letter-spacing: 2px;
@@ -785,12 +770,14 @@ Modal
 
 .projects__card p {
     color: var(--pColor2);
-    margin-bottom: 20px;    
+    margin-bottom: 20px; 
+    font-size: 1.2rem;
+    font-weight: 500;   
 }
 
 .projects__link {
-    font-weight: 700;
-    font-size: 1.3rem;
+    font-weight: 500;
+    font-size: 1.4rem;
     transition: .1s;
     color: var(--pColor2);
 }
@@ -830,15 +817,25 @@ Modal
     border-color: var(--sColor1);
 }
 
-/* Contact */
+/* ===== C O N T A C T ===== */
 .contact.container {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 2%;
 } 
 
-.contact-container {
+.section__title.contact {
+    margin-bottom: 0;
+}
+
+.contact h2 {
+    color: var(--pColor1);
+    font-weight: 900;
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+.contact__content {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 10rem 1fr;
@@ -847,32 +844,16 @@ Modal
     max-width: 100%;
     border-radius: 16px;
     margin-bottom: 2rem;
-    margin-top: 1rem;
 }
 
-.email-form {
-    margin-top: 8px;
+.contact__form {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     grid-area: contactForm;
 }
 
-.form__msg {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    color: var(--pColor1);
-}
-
-.form__msg i {
-    font-size: 1.5rem;
-}
-
-.form__msg h2 {
-    margin-left: 10px;
-    font-size: 1.6rem;
-}
 
 .form__container {
     display: flex;
@@ -883,59 +864,60 @@ Modal
     position: relative;
 }
 
-.email-form input {
-    height: 2.5em;
-    padding: 6px;
+.contact__form input {
+    padding: 10px;
     width: 100%;
     max-width: 100%;
     font-size: 1.2rem;
-    border: none;
-    border-bottom: 1px solid #eee6e6;
+    border: 1px solid #767676;
     background-color: transparent;
-    color: var(--pColor1);
+    color: var(--pColor2);
     transition: all 0.3s ease;
     outline: none;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    border-radius: 6px;
 }
 
-.email-form textarea {
-    padding: 6px;
+.contact__form textarea {
+    padding: 10px;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
     font-size: 1.2rem;
     border: none;
-    border-bottom: 1px solid #eee6e6;
+    border: 1px solid #767676;
     background-color: transparent;
     color: var(--pColor1);
     transition: all 0.3s ease;
     outline: none;
+    border-radius: 6px;
 }
 
-.email-form input ~ span, 
-.email-form textarea ~ span
-{
-    transform: translateY(-42px);
-    font-size: 1.2rem;
+.contact__form input ~ span, 
+.contact__form textarea ~ span
+{   
+    text-transform: uppercase;
+    transform: translateY(-38px);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
     opacity: 1;
     border-color: var(--sColor1);
-    padding: 0px 10px;
     color: #eee6e6
 }
 
-.email-form input:focus, 
-.email-form textarea:focus
+.contact__form input:focus, 
+.contact__form textarea:focus
 {
     border-color: var(--sColor1);
 }
 
-.email-form input:focus ~ span, 
-.email-form textarea:focus ~ span
+.contact__form input:focus ~ span, 
+.contact__form textarea:focus ~ span
 {
     color: var(--sColor1);
 }
 
-.email-form span {
+.contact__form span {
     position: absolute;
     top: .9em;
     left: 12px;
@@ -946,22 +928,22 @@ Modal
     font-weight: 500;
 }
 
-.email-form input:valid,
-.email-form textarea:valid {
+.contact__form input:valid,
+.contact__form textarea:valid {
     border-color: var(--sucess);
 }
 
-.email-form input:valid ~ span,
-.email-form textarea:valid ~ span{
+.contact__form input:valid ~ span,
+.contact__form textarea:valid ~ span{
     color: var(--sucess);
 }
 
-.form-btn {
+.contact__form-btn {
     display: flex;
     justify-content: flex-end;
 }
 
-.form-btn button {
+.contact__form-btn button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -981,12 +963,12 @@ Modal
     margin: 10px 0px;
 }
 
-.form-btn button:hover {
+.contact__form-btn button:hover {
     transition: .1s;
     transform: scale(1.1);
 }
 
-.form-btn p {
+.contact__form-btn p {
     margin-right: 5px;
     font-size: 0.9rem;
 }
@@ -994,36 +976,37 @@ Modal
 .contact__infos {
     color: var(--pColor2);
     grid-area: contactInfos;
+    
 }
 
-.contact__infos h2 {
-    color: var(--pColor1);
-    font-weight: 900;
-    font-size: 2.6rem;
-    margin-bottom: 10px;
-}
-
-.contact-intro__msg p {
+.contact__infos-msg p {
     color: var(--pColor2);
     font-weight: 400;
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.contact__infos-container {
+.contact__infos-content {
     display: flex;
     flex-direction: column;
     justify-content: center;    
     gap: 10px;
     padding: 10px 0px;
+    margin-bottom: 20px;
 }
 
-.contact__item {
+.contact__infos-item {
     display: flex;
     align-items: center;
 }
 
-.contact__item-icon {
+.contact__infos-item p {
+    color: var(--pColor1);
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.contact__infos-icon {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -1033,31 +1016,25 @@ Modal
     justify-content: center;
 }
 
-.contact__item-icon i {
+.contact__infos-icon i {
     font-size: 1.1rem;
     color: var(--pColor1);
 }
 
-.contact__item p {
-    color: var(--pColor1);
-    font-weight: 400;
-    font-size: 1.4rem;
-}
-
-.contact__infos-medias {
+.contact__medias {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 50px;
     margin-top: 10px;
 }
 
-.contact__infos-medias i {
+.contact__medias i {
     font-size: 2rem;
     color: var(--pColor2);
     transition: .1s;
 }
 
-.contact__infos-media i:hover {
+.contact__media i:hover {
     transition: .1s;
     transform: scale(1.1);
     cursor: pointer;
@@ -1073,7 +1050,7 @@ Modal
     height: 50px;
 }
 
-/* Footer */
+/* ===== F O O T E R ===== */
 footer {
     position: relative;
     background-image: linear-gradient(to right, var(--pColor6), #060b13 ,#0e1a2b) ;
