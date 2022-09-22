@@ -383,33 +383,6 @@
             </div>
 
             <div class="contact__content">
-                <form class="contact__form" action="https://formsubmit.co/gustavodiasa2121@gmail.com" method="POST">
-                    <fieldset class="form__container">
-                        <div class="form__field">
-                            <input class="form__field-input" placeholder="Enter your name" type="text" id="form-name" autocomplete="off" name="Name"
-                                required>
-                            <span>Name</span>
-                        </div>
-                        <div class="form__field">
-                            <input class="form__field-input" placeholder="Enter your e-mail" type="email" id="form-email" autocomplete="off"
-                                name="Email" required>
-                            <span>Email</span>
-                        </div>
-
-                        <div class="form__field message">
-                            <textarea class="form__field-input" placeholder="Enter your message" name="Message" id="form-message" maxlength="255"
-                                rows="1" autocomplete="off" required></textarea>
-                            <span>Message</span>
-                        </div>
-                    </fieldset>
-
-                    <div class="contact__form-btn">
-                        <button class="default-button" type="submit" value="send">
-                            <p>Send</p>
-                        </button>
-                    </div>
-                </form>
-
                 <div class="contact__infos">
                     <div class="projects__title title-default">
                         <p>Message me</p>
@@ -438,7 +411,7 @@
                             <div class="contact__infos-icon">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
-                            <p>gustavodiasa2121@gmail.com</p>
+                            <p id="contact-email">gustavodiasa2121@gmail.com</p>
                         </div>
                     </div>
 
@@ -462,6 +435,33 @@
                         </div>
                     </div>
                 </div>
+
+                <form class="contact__form" action="https://formsubmit.co/gustavodiasa2121@gmail.com" method="POST">
+                    <fieldset class="form__container">
+                        <div class="form__field">
+                            <input class="form__field-input" placeholder="Enter your name" type="text" id="form-name" autocomplete="off" name="Name"
+                                required>
+                            <span>Name</span>
+                        </div>
+                        <div class="form__field">
+                            <input class="form__field-input" placeholder="Enter your e-mail" type="email" id="form-email" autocomplete="off"
+                                name="Email" required>
+                            <span>Email</span>
+                        </div>
+
+                        <div class="form__field message">
+                            <textarea class="form__field-input" placeholder="Enter your message" name="Message" id="form-message" maxlength="255"
+                                rows="1" autocomplete="off" required></textarea>
+                            <span>Message</span>
+                        </div>
+                    </fieldset>
+
+                    <div class="contact__form-btn">
+                        <button class="default-button" type="submit" value="send">
+                            <p>Send</p>
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>

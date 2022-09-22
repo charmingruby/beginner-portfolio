@@ -218,14 +218,14 @@
     }
 
     .contact__content {
-        display: grid;
-        grid-template-rows: 1fr 1rem 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: "contactInfos" 
-                             "."
-                             "contactForm";
+        display: flex;
+        flex-direction: column;
         width: 100%;
         border-radius: 16px;
+    }
+
+    #contact-email {
+        word-break: break-all;
     }
 
 }
